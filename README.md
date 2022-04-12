@@ -11,6 +11,12 @@ description: This is my personal pages to review all data projects so far
 * c
 * d
 
-```
-// Some code
-```
+{% hint style="info" %}
+personal pages^
+
+Person 1
+
+Person 2
+
+
+{% endhint %}
