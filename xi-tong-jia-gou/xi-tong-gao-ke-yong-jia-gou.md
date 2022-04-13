@@ -1,6 +1,6 @@
 # 系统高可用架构
 
-## 一、高可用架构简介 <a href="#yi-gao-ke-yong-jia-gou-jian-jie" id="yi-gao-ke-yong-jia-gou-jian-jie"></a>
+## 高可用架构简介
 
 ### 系统可用性的度量 <a href="#xi-tong-ke-yong-xing-de-du-liang" id="xi-tong-ke-yong-xing-de-du-liang"></a>
 
@@ -46,7 +46,7 @@
 5. **管理问题**。没有梳理出关键服务以及服务的依赖关系，运行信息没有和控制系统同步……
 6. **硬件问题**。硬盘损坏、网卡出问题、交换机出问题、机房掉电、挖掘机问题……
 
-### 什么是高可用的系统架构 <a href="#shen-me-shi-gao-ke-yong-de-xi-tong-jia-gou" id="shen-me-shi-gao-ke-yong-de-xi-tong-jia-gou"></a>
+#### [#](https://dunwu.github.io/design/architecture/%E7%B3%BB%E7%BB%9F%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84.html#%E4%BB%80%E4%B9%88%E6%98%AF%E9%AB%98%E5%8F%AF%E7%94%A8%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84)什么是高可用的系统架构 <a href="#shen-me-shi-gao-ke-yong-de-xi-tong-jia-gou" id="shen-me-shi-gao-ke-yong-de-xi-tong-jia-gou"></a>
 
 通常，企业级应用系统为提高系统可用性，会采用较昂贵的软硬件设备，当然这样的设备也比较稳定。
 
@@ -76,7 +76,7 @@ BASE 是 **`基本可用（Basically Available）`**、**`软状态（Soft State
 
 ## 三、架构模式 <a href="#san-jia-gou-mo-shi" id="san-jia-gou-mo-shi"></a>
 
-### 主备复制 <a href="#zhu-bei-fu-zhi" id="zhu-bei-fu-zhi"></a>
+#### [#](https://dunwu.github.io/design/architecture/%E7%B3%BB%E7%BB%9F%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84.html#%E4%B8%BB%E5%A4%87%E5%A4%8D%E5%88%B6)主备复制 <a href="#zhu-bei-fu-zhi" id="zhu-bei-fu-zhi"></a>
 
 主备复制是最常见也是最简单的一种存储高可用方案，几乎所有的存储系统都提供了主备复制的功能，例如 MySQL、Redis、MongoDB 等。
 
@@ -101,7 +101,7 @@ BASE 是 **`基本可用（Basically Available）`**、**`软状态（Soft State
 
 综合主备复制架构的优缺点，内部的后台管理系统使用主备复制架构的情况会比较多，例如学生管理系统、员工管理系统、假期管理系统等，因为这类系统的数据变更频率低，即使在某些场景下丢失数据，也可以通过人工的方式补全。
 
-### 主从复制 <a href="#zhu-cong-fu-zhi" id="zhu-cong-fu-zhi"></a>
+#### [#](https://dunwu.github.io/design/architecture/%E7%B3%BB%E7%BB%9F%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84.html#%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6)主从复制 <a href="#zhu-cong-fu-zhi" id="zhu-cong-fu-zhi"></a>
 
 主从复制和主备复制只有一字之差，区别在于：**主从复制模式中，从机要承担读操作**。
 
@@ -129,7 +129,7 @@ BASE 是 **`基本可用（Basically Available）`**、**`软状态（Soft State
 
 综合主从复制的优缺点，一般情况下，写少读多的业务使用主从复制的存储架构比较多。例如，论坛、BBS、新闻网站这类业务，此类业务的读操作数量是写操作数量的 10 倍甚至 100 倍以上。
 
-### 集群+分区 <a href="#ji-qun-fen-qu" id="ji-qun-fen-qu"></a>
+#### [#](https://dunwu.github.io/design/architecture/%E7%B3%BB%E7%BB%9F%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84.html#%E9%9B%86%E7%BE%A4-%E5%88%86%E5%8C%BA)集群+分区 <a href="#ji-qun-fen-qu" id="ji-qun-fen-qu"></a>
 
 在主备复制和主从复制模式中，都由一个共性问题：
 
@@ -150,7 +150,7 @@ BASE 是 **`基本可用（Basically Available）`**、**`软状态（Soft State
 * 负载均衡
 * 分布式 Session
 
-### 负载均衡 <a href="#fu-zai-jun-heng" id="fu-zai-jun-heng"></a>
+#### [#](https://dunwu.github.io/design/architecture/%E7%B3%BB%E7%BB%9F%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84.html#%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1)负载均衡 <a href="#fu-zai-jun-heng" id="fu-zai-jun-heng"></a>
 
 负载均衡，顾名思义，主要使用在业务量和数据量较高的情况下，当单台服务器不足以承担所有的负载压力时，通过负载均衡手段，将流量和数据分摊到一个集群组成的多台服务器上，以提高整体的负载处理能力。
 
@@ -160,7 +160,7 @@ BASE 是 **`基本可用（Basically Available）`**、**`软状态（Soft State
 
 > 负载均衡原理可以参考：[负载均衡基本原理(opens new window)](https://github.com/dunwu/blog/blob/master/source/\_posts/theory/load-balance.md)
 
-### 分布式 Session <a href="#fen-bu-shi-session" id="fen-bu-shi-session"></a>
+#### [#](https://dunwu.github.io/design/architecture/%E7%B3%BB%E7%BB%9F%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84.html#%E5%88%86%E5%B8%83%E5%BC%8F-session)分布式 Session <a href="#fen-bu-shi-session" id="fen-bu-shi-session"></a>
 
 应用服务器的高可用架构设计主要基于服务无状态这一特性。事实上，业务总是有状态的，如购物车记录用户的购买信息；用户的登录状态；最新发布的消息等等。
 
@@ -189,31 +189,31 @@ BASE 是 **`基本可用（Basically Available）`**、**`软状态（Soft State
   * 断路
 * 幂等性设计
 
-### 分级管理 <a href="#fen-ji-guan-li" id="fen-ji-guan-li"></a>
+#### [#](https://dunwu.github.io/design/architecture/%E7%B3%BB%E7%BB%9F%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84.html#%E5%88%86%E7%BA%A7%E7%AE%A1%E7%90%86)分级管理 <a href="#fen-ji-guan-li" id="fen-ji-guan-li"></a>
 
 将服务根据业务重要性进行分级管理，核心应用和服务优先使用更好的硬件，在运维响应速度上也格外迅速。
 
 在服务部署上进行必要的隔离，避免故障的连锁反应。低优先级的服务通过启动不同的线程或部署在不同的虚拟机上进行隔离，而高优先级的服务则需要部署在不同的物理机上，核心服务和数据甚至要部署在不同地域的数据中心。
 
-### 超时重试 <a href="#chao-shi-zhong-shi" id="chao-shi-zhong-shi"></a>
+#### [#](https://dunwu.github.io/design/architecture/%E7%B3%BB%E7%BB%9F%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84.html#%E8%B6%85%E6%97%B6%E9%87%8D%E8%AF%95)超时重试 <a href="#chao-shi-zhong-shi" id="chao-shi-zhong-shi"></a>
 
 由于服务器宕机、线程死锁等原因，可能导致应用程序对服务端的调用失去响应。所以有必要引入**超时机制**，一旦调用超时，服务化框架抛出异常，应用程序根据服务调度策略，选择重试或请求转移到其他机器上。
 
-### 异步调用 <a href="#yi-bu-tiao-yong" id="yi-bu-tiao-yong"></a>
+#### [#](https://dunwu.github.io/design/architecture/%E7%B3%BB%E7%BB%9F%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84.html#%E5%BC%82%E6%AD%A5%E8%B0%83%E7%94%A8)异步调用 <a href="#yi-bu-tiao-yong" id="yi-bu-tiao-yong"></a>
 
 对于需要即时响应的业务，应用在调用服务时可以通过消息队列等异步方式完成，避免一个服务失败导致整个应用请求失败的情况。当然不是所有服务调用都可以异步调用，对于获取用户信息这类调用，采用异步方式会延长响应时间，得不偿失；此外，对于那些必须确认服务调用才能继续下一步操作的应用也不适宜食用异步调用。
 
-### 过载保护 <a href="#guo-zai-bao-hu" id="guo-zai-bao-hu"></a>
+#### [#](https://dunwu.github.io/design/architecture/%E7%B3%BB%E7%BB%9F%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84.html#%E8%BF%87%E8%BD%BD%E4%BF%9D%E6%8A%A4)过载保护 <a href="#guo-zai-bao-hu" id="guo-zai-bao-hu"></a>
 
 过载保护的手段，一般有：限流、降级、熔断。
 
-**限流**
+[**#**](https://dunwu.github.io/design/architecture/%E7%B3%BB%E7%BB%9F%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84.html#%E9%99%90%E6%B5%81)**限流**
 
 降级是从系统功能优先级的角度考虑如何应对故障，而限流则是从用户访问压力的角度来考虑如何应对故障。限流指只允许系统能够承受的访问量进来，超出系统访问能力的请求将被丢弃。
 
 常见的限流方式可以分为两类：基于请求限流和基于资源限流。
 
-**基于请求限流**
+[**#**](https://dunwu.github.io/design/architecture/%E7%B3%BB%E7%BB%9F%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84.html#%E5%9F%BA%E4%BA%8E%E8%AF%B7%E6%B1%82%E9%99%90%E6%B5%81)**基于请求限流**
 
 基于请求限流指从外部访问的请求角度考虑限流，常见的方式有：限制总量、限制时间量。
 
@@ -221,13 +221,13 @@ BASE 是 **`基本可用（Basically Available）`**、**`软状态（Soft State
 
 无论是限制总量还是限制时间量，共同的特点都是实现简单，但在实践中面临的主要问题是比较难以找到合适的阈值。
 
-**基于资源限流**
+[**#**](https://dunwu.github.io/design/architecture/%E7%B3%BB%E7%BB%9F%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84.html#%E5%9F%BA%E4%BA%8E%E8%B5%84%E6%BA%90%E9%99%90%E6%B5%81)**基于资源限流**
 
 基于请求限流是从系统外部考虑的，而基于资源限流是从系统内部考虑的，即：找到系统内部影响性能的关键资源，对其使用上限进行限制。常见的内部资源有：连接数、文件句柄、线程数、请求队列等。
 
 基于资源限流相比基于请求限流能够更加有效地反映当前系统的压力，但实践中设计也面临两个主要的难点：如何确定关键资源，如何确定关键资源的阈值。
 
-**降级**
+[**#**](https://dunwu.github.io/design/architecture/%E7%B3%BB%E7%BB%9F%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84.html#%E9%99%8D%E7%BA%A7)**降级**
 
 降级指系统将某些业务或者接口的功能降低，可以是只提供部分功能，也可以是完全停掉所有功能。
 
@@ -237,13 +237,13 @@ BASE 是 **`基本可用（Basically Available）`**、**`软状态（Soft State
 
 **关闭服务** - 关闭部分不重要的服务，或者服务内部关闭部分不重要的功能，以节约资源。
 
-**熔断**
+[**#**](https://dunwu.github.io/design/architecture/%E7%B3%BB%E7%BB%9F%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84.html#%E7%86%94%E6%96%AD)**熔断**
 
 熔断和降级是两个比较容易混淆的概念，因为单纯从名字上看好像都有禁止某个功能的意思，但其实内在含义是不同的，原因在于降级的目的是应对系统自身的故障，而熔断的目的是应对依赖的外部系统故障的情况。
 
 熔断机制实现的关键是需要有一个统一的 API 调用层，由 API 调用层来进行采样或者统计，如果接口调用散落在代码各处就没法进行统一处理了。
 
-#### 幂等性设计 <a href="#mi-deng-xing-she-ji" id="mi-deng-xing-she-ji"></a>
+#### [#](https://dunwu.github.io/design/architecture/%E7%B3%BB%E7%BB%9F%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84.html#%E5%B9%82%E7%AD%89%E6%80%A7%E8%AE%BE%E8%AE%A1)幂等性设计 <a href="#mi-deng-xing-she-ji" id="mi-deng-xing-she-ji"></a>
 
 服务调用失败后，调用方会将请求转发到其他服务器上，但是这个失败可能是虚假的失败。比如服务已经处理成功，但因为网络故障导致调用方没有收到应答，或等待超时。这种情况下，重新发起请求，可能会导致重复操作，如：向数据库写入两条记录。如果这个操作是比较敏感的交易操作，就会产生严重后果。
 
@@ -261,7 +261,7 @@ BASE 是 **`基本可用（Basically Available）`**、**`软状态（Soft State
 
 > 提示：再开始学习这部分内容前，建议先学习 **二、高可用架构理论**
 
-### 数据备份 <a href="#shu-ju-bei-fen" id="shu-ju-bei-fen"></a>
+#### [#](https://dunwu.github.io/design/architecture/%E7%B3%BB%E7%BB%9F%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84.html#%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD)数据备份 <a href="#shu-ju-bei-fen" id="shu-ju-bei-fen"></a>
 
 数据备份是保证数据有多个副本，任意副本的丢失都不会导致数据的永久丢失。
 
@@ -270,11 +270,11 @@ BASE 是 **`基本可用（Basically Available）`**、**`软状态（Soft State
   * **异步热备方式** - 异步热备方式是指多份数据副本的写入操作异步完成，应用程序收到数据服务系统的写操作成功响应时，只写成功了一份，存储系统将会异步地写其他副本。
   * **同步热备方式** - 同步热备方式是指多份数据副本的写入操作同步完成，即应用程序收到数据服务系统的写成功响应时，多份数据都已经写操作成功。但是当应用程序收到数据写操作失败的响应式，可能有部分副本或者全部副本都已经写入成功了（因为网络或者系统故障，无法返回操作成功的响应）。
 
-### 失效转移 <a href="#shi-xiao-zhuan-yi" id="shi-xiao-zhuan-yi"></a>
+#### [#](https://dunwu.github.io/design/architecture/%E7%B3%BB%E7%BB%9F%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84.html#%E5%A4%B1%E6%95%88%E8%BD%AC%E7%A7%BB)失效转移 <a href="#shi-xiao-zhuan-yi" id="shi-xiao-zhuan-yi"></a>
 
 失效转移是保证任意一个副本不可访问时，可以快速切换访问其他副本，保证系统整体可用。
 
-**失效确认**
+[**#**](https://dunwu.github.io/design/architecture/%E7%B3%BB%E7%BB%9F%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84.html#%E5%A4%B1%E6%95%88%E7%A1%AE%E8%AE%A4)**失效确认**
 
 ![](https://raw.githubusercontent.com/dunwu/images/dev/cs/design/architecture/check-fail.png)
 
@@ -282,17 +282,17 @@ BASE 是 **`基本可用（Basically Available）`**、**`软状态（Soft State
 
 对于应用程序的访问失败报告，控制中心还需要再一次发送心跳检测进行确认，以免错误判断服务器宕机。因为一旦进行数据访问的失效转移，意味着数据存储多份副本不一致，需要进行后续一系列的复杂动作。
 
-**访问转移**
+[**#**](https://dunwu.github.io/design/architecture/%E7%B3%BB%E7%BB%9F%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84.html#%E8%AE%BF%E9%97%AE%E8%BD%AC%E7%A7%BB)**访问转移**
 
 确认某台数据服务器宕机后，就需要将数据读写访问重新路由到其他服务器上。对于完全对等存储的服务器，当其中一台宕机后，应用程序根据配置直接切换到对等服务器上。如果存储不对等，就需要重新计算路由，选择存储服务器。
 
-**数据恢复**
+[**#**](https://dunwu.github.io/design/architecture/%E7%B3%BB%E7%BB%9F%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84.html#%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D)**数据恢复**
 
 因为某台服务器宕机，所以数据存储的副本数目会减少，必须将副本的数目恢复到系统设定的值，否则，再有服务器宕机时，就可能出现无法访问转移，数据永久丢失的情况。因此系统需要从健康的服务器复制数据，将数据副本数目恢复到设定值。
 
 ## 七、辅助手段 <a href="#qi-fu-zhu-shou-duan" id="qi-fu-zhu-shou-duan"></a>
 
-### 异地多活 <a href="#yi-di-duo-huo" id="yi-di-duo-huo"></a>
+#### [#](https://dunwu.github.io/design/architecture/%E7%B3%BB%E7%BB%9F%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84.html#%E5%BC%82%E5%9C%B0%E5%A4%9A%E6%B4%BB)异地多活 <a href="#yi-di-duo-huo" id="yi-di-duo-huo"></a>
 
 异地多活架构的关键点就是异地、多活，其中异地就是指地理位置上不同的地方，类似于“不要把鸡蛋都放在同一篮子里”；多活就是指不同地理位置上的系统都能够提供业务服务，这里的“活”是活动、活跃的意思。
 
@@ -332,7 +332,7 @@ BASE 是 **`基本可用（Basically Available）`**、**`软状态（Soft State
   * 日志记录
   * 用户补偿
 
-### 发布流程 <a href="#fa-bu-liu-cheng" id="fa-bu-liu-cheng"></a>
+#### [#](https://dunwu.github.io/design/architecture/%E7%B3%BB%E7%BB%9F%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84.html#%E5%8F%91%E5%B8%83%E6%B5%81%E7%A8%8B)发布流程 <a href="#fa-bu-liu-cheng" id="fa-bu-liu-cheng"></a>
 
 高可用的软件质量保证的手段：
 
@@ -342,7 +342,7 @@ BASE 是 **`基本可用（Basically Available）`**、**`软状态（Soft State
 * 自动化发布
 * 灰度发布
 
-### 系统监控 <a href="#xi-tong-jian-kong" id="xi-tong-jian-kong"></a>
+#### [#](https://dunwu.github.io/design/architecture/%E7%B3%BB%E7%BB%9F%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84.html#%E7%B3%BB%E7%BB%9F%E7%9B%91%E6%8E%A7)系统监控 <a href="#xi-tong-jian-kong" id="xi-tong-jian-kong"></a>
 
 > 不允许没有监控的系统上线。
 
@@ -358,4 +358,4 @@ BASE 是 **`基本可用（Basically Available）`**、**`软状态（Soft State
   * **失效转移** - 监控系统可以在发现故障的情况下主动通知应用进行失效转移。
   * **自动优雅降级**
     * 优雅降级是为了应付突然爆发的访问高峰，主动关闭部分功能，释放部分资源，以保证核心功能的优先访问。
-    * 系统在监控管理基础之上实现自动优雅降级，是柔性架构的理想状态。
+    * 系统在监控管理基础之上实现自动优雅降级，是柔性架构的理想状态

@@ -7,7 +7,5 @@
   * [📇 AIV Visual Checking](readme/aiv-visual-checking.md)
   * [🈁 Safety Stock Optimization](readme/safety-stock-optimization.md)
   * [💲 Margin Uplift](readme/margin-uplift.md)
-
-## Group 1
-
-* [系统高可用架构](group-1/xi-tong-gao-ke-yong-jia-gou.md)
+* [系统架构](xi-tong-jia-gou/README.md)
+  * [系统高可用架构](xi-tong-jia-gou/xi-tong-gao-ke-yong-jia-gou.md)
