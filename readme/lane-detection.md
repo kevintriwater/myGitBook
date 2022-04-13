@@ -7,7 +7,7 @@ cover: >-
 coverY: 0
 ---
 
-# Lane Detection
+# 🚚 Lane Detection
 
 ## Solution Design
 
@@ -55,4 +55,4 @@ Language: Python, Notebooks, Html5
 
 ### 1. Github:
 
-[https://github.com/kevintriwater/LaneDetection\_End2End](https://github.com/kevintriwater/LaneDetection\_End2End)
+&#x20;     [https://github.com/kevintriwater/LaneDetection\_End2End](https://github.com/kevintriwater/LaneDetection\_End2End)
