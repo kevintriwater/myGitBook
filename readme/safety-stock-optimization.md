@@ -21,6 +21,8 @@ SS (qty) = SS (days) x Past 1 year avg demand, excl. spike outlier month, parts 
 
 SS (days) = 0.8\* x Desirability factor x Risk period x Demand variability
 
+![](<../.gitbook/assets/image (4).png>)
+
 ### 2. New model with Mathematical Optimization&#x20;
 
 To develop a new model to forecast the Safety Stock demands
@@ -34,4 +36,10 @@ To develop a new model to forecast the Safety Stock demands
 
 ## Reference:
 
-### 1. Github:
+\[1] Sunil Chopra and P Meindl. Supply Chain Management: Strategy, Planning, and Operation. Pearson Education, 6th edition, 2016.&#x20;
+
+\[2] Laurent Lecou e. Internal report: Mftbc after market supply chain man- agement, 2019.&#x20;
+
+\[3] Ivan Pacheco Soto. Classi cation and forecasting for inventory management of spare parts. 11 2015.
+
+\[4] Github:
