@@ -1,6 +1,6 @@
 # 系统高可用架构
 
-## 高可用架构简介
+## 一、高可用架构简介
 
 ### 系统可用性的度量 <a href="#xi-tong-ke-yong-xing-de-du-liang" id="xi-tong-ke-yong-xing-de-du-liang"></a>
 

@@ -1,4 +1,16 @@
+---
+description: My personal notebooks to brief projects and knowledge
+---
+
 # Index
+
+{% content-ref url="readme/" %}
+[readme](readme/)
+{% endcontent-ref %}
+
+{% content-ref url="system-architecture/" %}
+[system-architecture](system-architecture/)
+{% endcontent-ref %}
 
 
 
