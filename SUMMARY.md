@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Data Projects](README.md)
-* [Index](summary.md)
-* [Lane Detection](lane-detection.md)
-* [Safety Stock Optimization](safety-stock-optimization.md)
+* [Index](README.md)
+* [Data Projects](readme/README.md)
+  * [Lane Detection](readme/lane-detection.md)
+  * [Safety Stock Optimization](readme/safety-stock-optimization.md)

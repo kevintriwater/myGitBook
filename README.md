@@ -1,22 +1,14 @@
----
-description: This is my personal pages to review all data projects so far
----
-
-# Data Projects
-
-## A collection of briefs of projects in data domain
-
-* a
-* b
-* c
-* d
-
-{% hint style="info" %}
-personal pages^
-
-Person 1
-
-Person 2
+# Index
 
 
-{% endhint %}
+
+* Best Finance
+* Frontline Mobility
+* Digital Marketing
+* Personalized Offering (O2O)
+* DTA Data Lake Design & Build
+* CUP (Contribution Margin Uplift)
+* Lane Detection
+* Safty Stock Optimization
+* AIV Robots
+* ......

@@ -2,6 +2,9 @@
 description: >-
   Using Mathematical Opt and Minimal Cost to reduce inventory investment in
   safety stock on 32K spare parts
+cover: >-
+  https://images.unsplash.com/photo-1635070041078-e363dbe005cb?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHwzfHxtYXRofGVufDB8fHx8MTY0OTgxNjY4NA&ixlib=rb-1.2.1&q=85
+coverY: 0
 ---
 
 # Safety Stock Optimization
@@ -21,4 +24,4 @@ SS (days) = 0.8\* x Desirability factor x Risk period x Demand variability
 * _<mark style="color:red;">Minimal Cost Solution</mark>_ - Mathematical model on cost optimization for all w/t given fill rate
 * _<mark style="color:red;">Interactive Simulation</mark>_ <mark style="color:blue;">validation</mark> - Consider user defined computational parameters & ensures adherences, as fill rate target, criticality, cost, priority etc.
 
-![](.gitbook/assets/Picture1.png)
+![](../.gitbook/assets/Picture1.png)
