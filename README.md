@@ -8,8 +8,8 @@ description: My personal notebooks to brief projects and knowledge
 [readme](readme/)
 {% endcontent-ref %}
 
-{% content-ref url="system-architecture/" %}
-[system-architecture](system-architecture/)
+{% content-ref url="architecture/" %}
+[architecture](architecture/)
 {% endcontent-ref %}
 
 

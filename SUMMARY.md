@@ -7,5 +7,5 @@
   * [📇 AIV Visual Checking](readme/aiv-visual-checking.md)
   * [🈁 Safety Stock Optimization](readme/safety-stock-optimization.md)
   * [💲 Margin Uplift](readme/margin-uplift.md)
-* [System Architecture](system-architecture/README.md)
-  * [HA Architecture](system-architecture/ha-architecture.md)
+* [Architecture](architecture/README.md)
+  * [HA Architecture](architecture/ha-architecture.md)
