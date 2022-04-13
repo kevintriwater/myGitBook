@@ -1,7 +1,7 @@
 ---
 description: >-
-  To build a solution for lane detection to stop the vehicle (automated driving)
-  when it deviates from the road; 自动驾驶卡车的辅助功能，在某些情况下（比如GPS信号弱）停止测试中的车辆以避免碰撞
+  To build a solution to allow the AIV robots to have optimized routes with
+  assignments
 cover: >-
   https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHw1fHxhdXRvbWF0aW9ufGVufDB8fHx8MTY0OTgyMDQ0Ng&ixlib=rb-1.2.1&q=85
 coverY: 0
@@ -11,7 +11,7 @@ coverY: 0
 
 ## Solution Design
 
-The idea is to develop a set of programmes to predict the lane and stop the vehicle under certain conditions
+Background:
 
 ![](<../.gitbook/assets/image (2).png>)
 
