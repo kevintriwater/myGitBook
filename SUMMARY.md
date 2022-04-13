@@ -8,4 +8,4 @@
   * [🈁 Safety Stock Optimization](readme/safety-stock-optimization.md)
   * [💲 Margin Uplift](readme/margin-uplift.md)
 * [System Architecture](system-architecture/README.md)
-  * [系统高可用架构](system-architecture/xi-tong-gao-ke-yong-jia-gou.md)
+  * [HA Architecture](system-architecture/ha-architecture.md)
