@@ -8,7 +8,7 @@ cover: >-
 coverY: 0
 ---
 
-# 🤖 AIV Visual Checking
+# 📇 AIV Visual Checking
 
 ## Solution Design
 
