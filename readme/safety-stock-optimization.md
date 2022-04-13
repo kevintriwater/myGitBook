@@ -21,7 +21,7 @@ SS (qty) = SS (days) x Past 1 year avg demand, excl. spike outlier month, parts 
 
 SS (days) = 0.8\* x Desirability factor x Risk period x Demand variability
 
-![](<../.gitbook/assets/image (4).png>)
+![](<../.gitbook/assets/image (4) (1).png>)
 
 ### 2. New model with Mathematical Optimization&#x20;
 
