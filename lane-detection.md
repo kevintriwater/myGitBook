@@ -37,8 +37,6 @@ Language: Python, Notebooks, Html5
 
 ![](.gitbook/assets/1\_UXc1hiGAOs4t2i1F6iVVMQ.jpeg)
 
-
-
 ![](<.gitbook/assets/image (2).png>)
 
 #### 3. Data Process & Calculation&#x20;
@@ -46,6 +44,6 @@ Language: Python, Notebooks, Html5
 * Define key parameters (center of lane, camera angles, thresholds of deviation, position the truck)
 * Trigger the signal to stop the vehicles (integration)
 
-![](<.gitbook/assets/image (4).png>)
+![](<.gitbook/assets/image (3).png>)
 
 #### 4. Continous improvement (Model update, reinforcement training etc) &#x20;
