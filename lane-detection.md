@@ -31,7 +31,13 @@ Language: Python, Notebooks, Html5
 * Create a model to predict the path
 * Exceptional case handling (light condition ;  weather ; sharp turn)
 
-![](<.gitbook/assets/image (2) (1).png>)
+![](.gitbook/assets/1\_8Ad83Bjglm4UbyekDSpUXw.png)
+
+![](.gitbook/assets/1\_Jtis7YWHs6FdRtWQrQjA-A.jpeg)
+
+![](.gitbook/assets/1\_UXc1hiGAOs4t2i1F6iVVMQ.jpeg)
+
+
 
 ![](<.gitbook/assets/image (2).png>)
 
