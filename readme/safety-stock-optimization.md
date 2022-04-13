@@ -11,7 +11,9 @@ coverY: 0
 
 Minimal Cost Approach to optimize the Safety Stock especially during COVID situation
 
-## 1. Review current solution
+## Solution Design
+
+### 1. Review current solution
 
 Previous Solution is to use set formula to calculate the Safety Stock over Truck & Bus Parts components
 
@@ -19,7 +21,7 @@ SS (qty) = SS (days) x Past 1 year avg demand, excl. spike outlier month, parts 
 
 SS (days) = 0.8\* x Desirability factor x Risk period x Demand variability
 
-## 2. New model with Mathematical Optimization&#x20;
+### 2. New model with Mathematical Optimization&#x20;
 
 To develop a new model to forecast the Safety Stock demands
 
@@ -29,3 +31,7 @@ To develop a new model to forecast the Safety Stock demands
 * _<mark style="color:red;">Interactive Simulation</mark>_ <mark style="color:blue;">validation</mark> - Consider user defined computational parameters & ensures adherences, as fill rate target, criticality, cost, priority etc.
 
 ![](../.gitbook/assets/Picture1.png)
+
+## Reference:
+
+### Github:
