@@ -11,7 +11,7 @@ coverY: 0
 
 ## Solution Design
 
-### The idea is to develop a set of programmes to predict the lane and stop the vehicle under certain conditions
+The idea is to develop a set of programmes to predict the lane and stop the vehicle under certain conditions
 
 ![](../.gitbook/assets/image.png)
 
@@ -21,14 +21,14 @@ Environment:  Windows platform on testing Trucks; Visual Studio
 Language: Python, Notebooks, Html5
 {% endhint %}
 
-#### 1. Data Collection & Image Process
+### 1. Data Collection & Image Process
 
 * Capture the images from Camera on the trucks
 * Take x frames per seconds to process at Pixel level
 
 ![](<../.gitbook/assets/image (1).png>)
 
-#### 2. Predict the lane path
+### 2. Predict the lane path
 
 * Find the lane lines (pixels)
 * Create a model to predict the path
@@ -42,11 +42,11 @@ Language: Python, Notebooks, Html5
 
 ![](<../.gitbook/assets/image (2).png>)
 
-#### 3. Data Process & Calculation&#x20;
+### 3. Data Process & Calculation&#x20;
 
 * Define key parameters (center of lane, camera angles, thresholds of deviation, position the truck)
 * Trigger the signal to stop the vehicles (integration)
 
 ![](<../.gitbook/assets/image (3).png>)
 
-#### 4. Continous improvement (Model update, reinforcement training etc) &#x20;
+### 4. Continous improvement (Model update, reinforcement training etc) &#x20;
