@@ -49,7 +49,10 @@ Language: Python, Notebooks, Html5
 
 ![](<../.gitbook/assets/image (3).png>)
 
-### 4. Continous improvement (Model update, reinforcement training etc) &#x20;
+### 4. Continous improvement
+
+* Model update
+* Reinforcement training
 
 ## Reference
 
