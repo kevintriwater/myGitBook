@@ -3,22 +3,24 @@ description: >-
   To build a solution for lane detection to stop the vehicle (automated driving)
   when it deviates from the road; 自动驾驶卡车的辅助功能，在某些情况下（比如GPS信号弱）停止测试中的车辆以避免碰撞
 cover: >-
-  https://images.unsplash.com/photo-1509034466863-08cfa4b776c4?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHw3fHxsYW5lfGVufDB8fHx8MTY0OTgxNjY0NQ&ixlib=rb-1.2.1&q=85
+  https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHw1fHxhdXRvbWF0aW9ufGVufDB8fHx8MTY0OTgyMDQ0Ng&ixlib=rb-1.2.1&q=85
 coverY: 0
 ---
 
-# 🚚 Lane Detection
+# 🤖 AIV Task Allocation
 
 ## Solution Design
 
 The idea is to develop a set of programmes to predict the lane and stop the vehicle under certain conditions
 
-![](../.gitbook/assets/image.png)
+![](<../.gitbook/assets/image (2).png>)
 
 {% hint style="info" %}
-Environment:  Windows platform on testing Trucks; Visual Studio
+Hardware design of smart shelves
 
-Language: Python, Notebooks, Html5
+Software design of automated pick-up&#x20;
+
+Identification of bottlenecks for future deployment&#x20;
 {% endhint %}
 
 ### 1. Data Collection & Image Process
